@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>MLE - LOAN RISK API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<!--h1>Risk Of Loan Repayment</h1 -->
+	<h1 style="text-align:center;float:center;">Risk Of Loan Repayment</h1> 
+
+     <!-- Main Input Paramaters for ML Model -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Loan_Amount" placeholder="Loan Amount" required="required" />
+        <input type="text" name="Interest_Rate" placeholder="Interest Rate" required="required" />
+		<input type="text" name="Purpose" placeholder="Purpose" required="required" />
+		<input type="text" name="Grade" placeholder="Grade" required="required" />
+		<input type="text" name="Annual_Income" placeholder="Annual Income" required="required" />
+		<input type="text" name="Revol_Util" placeholder="Revol_Until" required="required" />
+		<input type="text" name="Employment_Length" placeholder="Employment Length" required="required" />
+		<input type="text" name="Debt_to_income" placeholder="DTI (Debt-To-Income)" required="required" />
+		<input type="text" name="Delinq_2_years" placeholder="Delingq_2YRS" required="required" />
+		<input type="text" name="Homeownership" placeholder="Home Ownership" required="required" />
+		
+	
+	
+        <button type="submit" class="btn btn-primary btn-block btn-large">Calculate Risk</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+</body>
+</html>
