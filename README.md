@@ -24,4 +24,4 @@ to improve the model, hyperparameter of the model was tuned (n_estimators were i
 
 In order to deploy the model that can be used by many users, a PaaS (platform as a service) style architecture was used. This serves the model into the world wide web using python flask application. Since Heroku works connecting to 
 github updates of the models can be re-deployed by committing model changes since Flask will continue to use the saves model. It will be much nicer, if this model can be deployed into AWS or Azure with docker (different versions containerrized)
-into the cloud as a IaaS (infrastrucure as service), which will enable many users to access the REST API without stopping the service.
+into the cloud as IaaS (infrastrucure as service), which will enable many users to access the REST API without stopping the service.
