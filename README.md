@@ -25,3 +25,16 @@ to improve the model, hyperparameter of the model was tuned (n_estimators were i
 In order to deploy the model that can be used by many users, a PaaS (platform as a service) style architecture was used. This serves the model into the world wide web using python flask application. Since Heroku works connecting to 
 github updates of the models can be re-deployed by committing model changes since Flask will continue to use the saves model. It will be much nicer, if this model can be deployed into AWS or Azure with docker (different versions containerrized)
 into the cloud as IaaS (infrastrucure as service), which will enable many users to access the REST API without stopping the service.
+
+##### Challenges:
+Although Docker was recommeneded, installing docker in a virtual box (windows 10 home) and mounting to a disk was time consuming for configuration and debugging.
+
+Saving user data input into a database and use them for future model training to kepp updating the model since database configurations are needed and they have to sync with the web application.
+
+Different versions of models cannot be deployed without interrupting the service with the current architecture.
+
+
+##### Suggested Improvements:
+As mentioned above, deploying into cloud such as AWS with Docker and Kubernetes to orachestrate the workflow wihtout interrupting the service.
+
+More feature engineering techniques such as cross vlaidation techniques and trying out an ensemble model with corss validation to optimize the model.
