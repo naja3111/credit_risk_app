@@ -1,7 +1,7 @@
 ![phData Logo](img/phData_color_rgb.jpg "phData Logo")
 
 # phData MLE Challenge Project
-*An application that predicts whether a loan holders are at risk of late payment using a risk assessment.*
+*An application that predicts whether loan holders are at risk of late payment using a risk assessment.*
 
 ### Objective
 Objective of this proejct is to demonstrate deploying a machine learning model into production using a REST API after building a ml model. 
