@@ -22,7 +22,7 @@ outcome variables. However, given trainig and test datset was combined together,
 as data is imbalanced and ROC-AUC curve was slight more than 50% which always would positive results (0 in our case) for a randomly selected sample (i.e test/unseen data).
 to improve the model, hyperparameter of the model was tuned (n_estimators were increased from default 10 up to 100. This time the AUC went higher from 0.380 to 0.504. This model was re-deployed into the production.
 
-In order to deploy the model that can be used by many users, a PaaS (platform as a service) style architecture was used. This serves the model into the world wide web using python flask application. Since Heroku works connecting to 
+In order to deploy the model that can be used by many users, a PaaS (platform as a service) style architecture was used with Heroku. This serves the model into the world wide web using python flask application. Since Heroku works connecting to 
 github updates of the models can be re-deployed by committing model changes since Flask will continue to use the saves model. It will be much nicer, if this model can be deployed into AWS or Azure with docker (different versions containerrized)
 into the cloud as IaaS (infrastrucure as service), which will enable many users to access the REST API without stopping the service.
 
