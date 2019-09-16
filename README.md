@@ -44,3 +44,28 @@ Different versions of models cannot be deployed without interrupting the service
 As mentioned above, deploying into cloud such as AWS with Docker and Kubernetes to orachestrate the workflow wihtout interrupting the service.
 
 More feature engineering techniques such as cross vlaidation techniques and trying out an ensemble model with corss validation to optimize the model.
+
+##### Run the Updated Model Locally
+Assuming  - anaconda in Windows 10. redeployment of improved model can be run in a conda virtual environment
+cerate a virtual envirnment using (please use a different name if that name is already exists)
+`conda create -n loanmodel`
+
+Activate environemnt
+`conda activate loanmodel`
+
+Next, install required packages from requirements.txt 
+`conda install --file requirments.txt`
+
+Next, making sure you're in the right folder type
+`python app.py`
+
+This should open up a browser, whichever is the default will open flask application (usually internet explorer in windows).
+
+##### Heroku Proc File
+
+Heroku uses a Proc file which contains the gunicorn library, a webserver (simialr to nginex) that allows Heroku to deploy Flask application into the world wide web.
+
+Proc file and requirments.txt files have to be in the direcotry when dploying the model into Heroku as it installs requires packages into the deploying environment. 
+
+###### Snapshot of the app interface
+![App Interface](img/app_frontpage.jpg "App Interface")
