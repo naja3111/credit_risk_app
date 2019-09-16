@@ -4,7 +4,7 @@
 *An application that predicts whether loan holders are at risk of late payment using a risk assessment.*
 
 ### Objective
-Objective of this proejct is to demonstrate deploying a machine learning model into production using a REST API after building a ml model. 
+Objective of this project is to demonstrate deploying a machine learning model into production using a REST API. 
 phData MLE-Challenge has given a dataset, pre-built model and other environemnt set up to run pre-built model.
 
 ### Tasks:
@@ -13,13 +13,13 @@ phData MLE-Challenge has given a dataset, pre-built model and other environemnt 
 
 ### My Approach
 ##### Task 1:
-The model provided in in the challege was deployed locally using Flask REST API in an Anaconda virtual environment. A web template with a form was used, so that a user can enter values, which are model features into the form
-and get prediections as output. Flask application uses a predict function, which uses the pickled model from local folder that gives predictions for "POST" method. These are done within the virtual environment itself.
+The model provided in the challege was deployed locally using Flask REST API in an Anaconda virtual environment. A web template with a form was used, a user can enter values (which are model features) into the form
+and get predictions as output. Flask application uses a predict function, which uses the pickled model that does predictions for "POST" method. These are done within the virtual environment itself.
 
 ##### Task 2:
 The purpose of the following steps are to improve exisitng randomforest classification model and deploy it to the REST API. After a quick data exploration, since the data seemed little imbalanced with more of the positive outcome variables and less of negative 
 outcome variables. However, given trainig and test datset was combined together, shuffled and divided into 80:20 train and test sets althouugh this approcah did not make a big difference. Accuracy is not a good measure 
-as data is imbalanced and ROC-AUC curve was slight more than 30% which always would positive results (0 in our case) for a randomly selected sample (i.e test/unseen data).
+as data is imbalanced and ROC-AUC curve was slightly over 38% which always would positive results (0 in our case) for a randomly selected sample (i.e test/unseen data).
 to improve the model, hyperparameter of the model was tuned (n_estimators were increased from default 10 up to 100. This time the AUC went higher from 0.380 to 0.504. This model was re-deployed into the production.
 
 ###### Original ROC-AUC
@@ -44,7 +44,9 @@ As mentioned above, deploying into cloud such as AWS with Docker and Kubernetes 
 Hyper parameter optimization using `gridserachcv` techniques to optimize the model.
 
 ##### Run the Updated Model Locally
-Assuming  - anaconda in Windows 10. Redeployment of improved model can be run in a conda virtual environment. 
+Assumption - anaconda in Windows 10 operating system. 
+
+Redeployment of improved model can be run in a conda virtual environment. 
 
 Follow this step to install using YML file, otherwise skip to the next section to create venv.In anaconda propmt run the following (file is in <env-setup> folder). 
 `conda env create -f environment.yml`
