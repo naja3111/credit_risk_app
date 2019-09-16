@@ -69,6 +69,6 @@ Heroku uses a Proc file which contains the gunicorn library, a webserver (simial
 
 Proc file and requirments.txt files have to be in the direcotry when dploying the model into Heroku as it installs requires packages into the deploying environment. 
 
-###### Snapshot of the app interface:
-[link](https://credit-risk-rest-api.herokuapp.com/)
+###### Snapshot of the app interface: [Deployed_App_Link](https://credit-risk-rest-api.herokuapp.com/)
+
 ![App Interface](img/app_frontpage.jpg "App Interface")
