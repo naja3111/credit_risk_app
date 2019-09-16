@@ -19,7 +19,7 @@ and get prediections as output. Flask application uses a predict function, which
 ##### Task 2:
 The purpose of the following steps are to improve exisitng randomforest classification model and deploy it to the REST API. After a quick data exploration, since the data seemed little imbalanced with more of the positive outcome variables and less of negative 
 outcome variables. However, given trainig and test datset was combined together, shuffled and divided into 80:20 train and test sets althouugh this approcah did not make a big difference. Accuracy is not a good measure 
-as data is imbalanced and ROC-AUC curve was slight more than 50% which always would positive results (0 in our case) for a randomly selected sample (i.e test/unseen data).
+as data is imbalanced and ROC-AUC curve was slight more than 30% which always would positive results (0 in our case) for a randomly selected sample (i.e test/unseen data).
 to improve the model, hyperparameter of the model was tuned (n_estimators were increased from default 10 up to 100. This time the AUC went higher from 0.380 to 0.504. This model was re-deployed into the production.
 
 ###### Original ROC-AUC
