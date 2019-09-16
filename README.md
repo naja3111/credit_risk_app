@@ -43,10 +43,13 @@ Different versions of models cannot be deployed without interrupting the service
 ##### Suggested Improvements:
 As mentioned above, deploying into cloud such as AWS with Docker and Kubernetes to orachestrate the workflow wihtout interrupting the service.
 
-More feature engineering techniques such as cross vlaidation techniques and trying out an ensemble model with corss validation to optimize the model.
+Hyper parameter optimization using `gridserachcv` techniques to optimize the model.
 
 ##### Run the Updated Model Locally
-Assuming  - anaconda in Windows 10. redeployment of improved model can be run in a conda virtual environment.
+Assuming  - anaconda in Windows 10. Redeployment of improved model can be run in a conda virtual environment. 
+
+Follow this step to install using YML file, otherwise skip to the next section to create venv.In anaconda propmt run the following (file is in <env-setup> folder). 
+`conda env create -f environment.yml`
 
 cerate a virtual envirnment using (please use a different name if that name is already exists)
 `conda create -n loanmodel`
