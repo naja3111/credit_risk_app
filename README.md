@@ -46,7 +46,8 @@ As mentioned above, deploying into cloud such as AWS with Docker and Kubernetes 
 More feature engineering techniques such as cross vlaidation techniques and trying out an ensemble model with corss validation to optimize the model.
 
 ##### Run the Updated Model Locally
-Assuming  - anaconda in Windows 10. redeployment of improved model can be run in a conda virtual environment
+Assuming  - anaconda in Windows 10. redeployment of improved model can be run in a conda virtual environment.
+
 cerate a virtual envirnment using (please use a different name if that name is already exists)
 `conda create -n loanmodel`
 
