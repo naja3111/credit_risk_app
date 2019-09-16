@@ -33,7 +33,7 @@ github updates of the models can be re-deployed by committing model changes sinc
 into the cloud as IaaS (infrastrucure as service), which will enable many users to access the REST API without stopping the service.
 
 ##### Challenges:
-Saving user data input into a database and use them for future model training to kepp updating the model since database configurations are needed and they have to sync with the web application.
+Saving user data input into a database and use them for future model training to keep updating the model since database configurations are needed and they have to sync with the web application.
 
 Different versions of models cannot be deployed without interrupting the service with the current architecture.
 
