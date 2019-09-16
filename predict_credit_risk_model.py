@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 # Model libraries
 from sklearn.ensemble import RandomForestClassifier
-from xgboost import XGBClassifier # Use XGBClassifier as we have binary classification problem
+# from xgboost import XGBClassifier # Use XGBClassifier as we have binary classification problem
 
 # Preprocessing and Pipeline libraries
 import sklearn
@@ -66,7 +66,7 @@ preprocess = ColumnTransformer(
 
 
 ## create a pipeline
-model = make_pipeline(preprocess, XGBClassifier())
+model = make_pipeline(preprocess, RandomForestClassifier(n_estimators = 100, random_state=42))
 
 ### Train the model
 print("\nTraining model ...")

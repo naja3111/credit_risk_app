@@ -9,6 +9,7 @@ import numpy as np
 from flask import Flask, request, render_template
 import pickle
 import pandas as pd
+import webbrowser
 
 app = Flask(__name__)
 model = pickle.load(open('models/credit_risk_model.pkl', 'rb'))
@@ -50,13 +51,14 @@ def predict():
     ## First value 0th index tells use the probability of 0 happening, which is no rsik associated
     ## Using 0th index for output value 0 print risk result, so users can see the result.
     if prediction[0][0] >= 0.9:
-        risk = "No Risks associated with the profile"
+        risk = "No Risks associated with the profile entered"
     elif prediction[0][0] < 0.9:
-        risk = "Risks associated with this profile"
+        risk = "Risks associated with this profile entered"
     
     #return render_template('index.html', prediction_text='Credit Risk{}'.format(risk))
     return render_template('index.html', prediction_text="Result: {}".format(risk))
 
 
 if __name__ == "__main__":
+    webbrowser.open('http://localhost:5000')
     app.run(debug=True)
