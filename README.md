@@ -57,7 +57,7 @@ cerate a virtual envirnment using (please use a different name if that name is a
 Activate environemnt
 `conda activate loanmodel`
 
-Next, install required packages from requirements.txt 
+Next, install required packages from requirements.txt. Please note requirement.txt is in the root folder as heroku requires with Proc file.
 `conda install --file requirments.txt`
 
 Next, making sure you're in the right folder type
